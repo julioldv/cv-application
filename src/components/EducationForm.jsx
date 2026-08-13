@@ -1,16 +1,28 @@
-function EducationForm() {
+function EducationForm({ education, onEducationChange }) {
   return (
     <section>
       <h2>Educational Information</h2>
 
       <div>
         <label htmlFor="school-name">School name:</label>
-        <input type="text" id="school-name" name="schoolName" />
+        <input
+          type="text"
+          id="school-name"
+          name="schoolName"
+          value={education.schoolName}
+          onChange={onEducationChange}
+        />
       </div>
 
       <div>
         <label htmlFor="degree">Degree:</label>
-        <input type="text" id="degree" name="degree" />
+        <input
+          type="text"
+          id="degree"
+          name="degree"
+          value={education.degree}
+          onChange={onEducationChange}
+        />
       </div>
 
       <div>
@@ -19,12 +31,20 @@ function EducationForm() {
           type="date"
           id="education-start-date"
           name="educationStartDate"
+          value={education.educationStartDate}
+          onChange={onEducationChange}
         />
       </div>
 
       <div>
         <label htmlFor="education-end-date">End date:</label>
-        <input type="date" id="education-end-date" name="educationEndDate" />
+        <input
+          type="date"
+          id="education-end-date"
+          name="educationEndDate"
+          value={education.educationEndDate}
+          onChange={onEducationChange}
+        />
       </div>
     </section>
   );

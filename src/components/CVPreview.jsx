@@ -1,28 +1,32 @@
-function CVPreview({ generalInformation }) {
+function CVPreview({ generalInformation, education, experience }) {
   return (
     <section>
       <h2>CV Preview</h2>
 
       <article>
         <header>
-          <h3>{generalInformation.name}</h3>
+          <h3>{generalInformation.fullName}</h3>
           <p>{generalInformation.email}</p>
           <p>{generalInformation.phone}</p>
         </header>
 
         <section>
           <h3>Education</h3>
-          <p>Example University</p>
-          <p>Example Degree</p>
-          <p>Example Start Date – Example End Date</p>
+          <p>{education.schoolName}</p>
+          <p>{education.degree}</p>
+          <p>
+            {education.educationStartDate} – {education.educationEndDate}
+          </p>
         </section>
 
         <section>
           <h3>Experience</h3>
-          <p>Example Company</p>
-          <p>Example Position</p>
-          <p>Example Start Date – Example End Date</p>
-          <p>Example responsibilities</p>
+          <p>{experience.companyName}</p>
+          <p>{experience.position}</p>
+          <p>
+            {experience.experienceStartDate} – {experience.experienceEndDate}
+          </p>
+          <p>{experience.responsibilities}</p>
         </section>
       </article>
 

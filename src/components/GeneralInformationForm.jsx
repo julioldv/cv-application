@@ -1,4 +1,4 @@
-function GeneralInformationForm({ generalInformation, setGeneralInformation }) {
+function GeneralInformationForm({ generalInformation, onInformationChange }) {
   return (
     <section>
       <h2>General Information</h2>
@@ -9,13 +9,8 @@ function GeneralInformationForm({ generalInformation, setGeneralInformation }) {
           type="text"
           id="full-name"
           name="fullName"
-          value={generalInformation.name}
-          onChange={(e) => {
-            setGeneralInformation((prev) => ({
-              ...prev,
-              name: e.target.value,
-            }));
-          }}
+          value={generalInformation.fullName}
+          onChange={onInformationChange}
         />
       </div>
 
@@ -26,12 +21,7 @@ function GeneralInformationForm({ generalInformation, setGeneralInformation }) {
           id="email"
           name="email"
           value={generalInformation.email}
-          onChange={(e) => {
-            setGeneralInformation((prev) => ({
-              ...prev,
-              email: e.target.value,
-            }));
-          }}
+          onChange={onInformationChange}
         />
       </div>
 
@@ -42,12 +32,7 @@ function GeneralInformationForm({ generalInformation, setGeneralInformation }) {
           id="phone"
           name="phone"
           value={generalInformation.phone}
-          onChange={(e) => {
-            setGeneralInformation((prev) => ({
-              ...prev,
-              phone: e.target.value,
-            }));
-          }}
+          onChange={onInformationChange}
         />
       </div>
     </section>

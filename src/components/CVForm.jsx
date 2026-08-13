@@ -2,15 +2,28 @@ import GeneralInformationForm from './GeneralInformationForm';
 import EducationForm from './EducationForm';
 import ExperienceForm from './ExperienceForm';
 
-function CVForm({ generalInformation, setGeneralInformation }) {
+function CVForm({
+  generalInformation,
+  onInformationChange,
+  education,
+  onEducationChange,
+  experience,
+  onExperienceChange,
+}) {
   return (
     <form>
       <GeneralInformationForm
         generalInformation={generalInformation}
-        setGeneralInformation={setGeneralInformation}
+        onInformationChange={onInformationChange}
       />
-      <EducationForm />
-      <ExperienceForm />
+      <EducationForm
+        education={education}
+        onEducationChange={onEducationChange}
+      />
+      <ExperienceForm
+        experience={experience}
+        onExperienceChange={onExperienceChange}
+      />
       <button type="submit">Submit</button>
     </form>
   );

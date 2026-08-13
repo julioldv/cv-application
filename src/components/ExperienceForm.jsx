@@ -1,16 +1,28 @@
-function ExperienceForm() {
+function ExperienceForm({ experience, onExperienceChange }) {
   return (
     <section>
       <h2>Experience</h2>
 
       <div>
         <label htmlFor="company-name">Company name:</label>
-        <input type="text" id="company-name" name="companyName" />
+        <input
+          type="text"
+          id="company-name"
+          name="companyName"
+          value={experience.companyName}
+          onChange={onExperienceChange}
+        />
       </div>
 
       <div>
         <label htmlFor="position">Position:</label>
-        <input type="text" id="position" name="position" />
+        <input
+          type="text"
+          id="position"
+          name="position"
+          value={experience.position}
+          onChange={onExperienceChange}
+        />
       </div>
 
       <div>
@@ -19,6 +31,8 @@ function ExperienceForm() {
           id="responsibilities"
           name="responsibilities"
           rows={4}
+          value={experience.responsibilities}
+          onChange={onExperienceChange}
         ></textarea>
       </div>
 
@@ -28,12 +42,20 @@ function ExperienceForm() {
           type="date"
           id="experience-start-date"
           name="experienceStartDate"
+          value={experience.experienceStartDate}
+          onChange={onExperienceChange}
         />
       </div>
 
       <div>
         <label htmlFor="experience-end-date">End date:</label>
-        <input type="date" id="experience-end-date" name="experienceEndDate" />
+        <input
+          type="date"
+          id="experience-end-date"
+          name="experienceEndDate"
+          value={experience.experienceEndDate}
+          onChange={onExperienceChange}
+        />
       </div>
     </section>
   );
