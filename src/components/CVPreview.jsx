@@ -1,13 +1,13 @@
-function CVPreview() {
+function CVPreview({ generalInformation }) {
   return (
     <section>
       <h2>CV Preview</h2>
 
       <article>
         <header>
-          <h3>Example Name</h3>
-          <p>example@mail.com</p>
-          <p>555-555-5555</p>
+          <h3>{generalInformation.name}</h3>
+          <p>{generalInformation.email}</p>
+          <p>{generalInformation.phone}</p>
         </header>
 
         <section>
