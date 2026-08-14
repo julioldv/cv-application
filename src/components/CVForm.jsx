@@ -9,9 +9,10 @@ function CVForm({
   onEducationChange,
   experience,
   onExperienceChange,
+  onFormSubmit,
 }) {
   return (
-    <form>
+    <form onSubmit={onFormSubmit}>
       <GeneralInformationForm
         generalInformation={generalInformation}
         onInformationChange={onInformationChange}

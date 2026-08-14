@@ -1,4 +1,9 @@
-function CVPreview({ generalInformation, education, experience }) {
+function CVPreview({
+  generalInformation,
+  education,
+  experience,
+  onEditRequest,
+}) {
   return (
     <section>
       <h2>CV Preview</h2>
@@ -30,7 +35,9 @@ function CVPreview({ generalInformation, education, experience }) {
         </section>
       </article>
 
-      <button type="button">Edit</button>
+      <button type="button" onClick={onEditRequest}>
+        Edit
+      </button>
     </section>
   );
 }

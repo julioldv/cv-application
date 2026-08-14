@@ -4,6 +4,8 @@ import CVPreview from './components/CVPreview';
 import './App.css';
 
 function App() {
+  const [isEditing, setIsEditing] = useState(true);
+
   const [generalInformation, setGeneralInformation] = useState({
     fullName: '',
     email: '',
@@ -25,7 +27,7 @@ function App() {
     experienceEndDate: '',
   });
 
-  function handleInformationChange(event) {
+  function handleGeneralInformationChange(event) {
     const { name, value } = event.target;
 
     setGeneralInformation((prev) => ({
@@ -51,22 +53,36 @@ function App() {
     }));
   }
 
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    setIsEditing(false);
+  }
+
+  function handleEditRequest() {
+    setIsEditing(true);
+  }
+
   return (
     <div>
       <h1>CV Application</h1>
-      <CVForm
-        generalInformation={generalInformation}
-        onInformationChange={handleInformationChange}
-        education={education}
-        onEducationChange={handleEducationChange}
-        experience={experience}
-        onExperienceChange={handleExperienceChange}
-      />
-      <CVPreview
-        generalInformation={generalInformation}
-        education={education}
-        experience={experience}
-      />
+      {isEditing ? (
+        <CVForm
+          generalInformation={generalInformation}
+          onInformationChange={handleGeneralInformationChange}
+          education={education}
+          onEducationChange={handleEducationChange}
+          experience={experience}
+          onExperienceChange={handleExperienceChange}
+          onFormSubmit={handleFormSubmit}
+        />
+      ) : (
+        <CVPreview
+          generalInformation={generalInformation}
+          education={education}
+          experience={experience}
+          onEditRequest={handleEditRequest}
+        />
+      )}
     </div>
   );
 }
