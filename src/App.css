@@ -77,7 +77,70 @@
 }
 
 .cv-preview {
+  margin-inline: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cv-preview > h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .cv-document {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cv-document header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.cv-document header h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.cv-document section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cv-document section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.secondary-button {
+  align-self: flex-start;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  padding: 0.75rem 1.5rem;
+
+  background-color: white;
+  color: #222;
+
+  border: 1px solid #aaa;
+  border-radius: 5px;
+
+  cursor: pointer;
 }
