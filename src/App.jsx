@@ -63,7 +63,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="app">
       <h1>CV Application</h1>
       {isEditing ? (
         <CVForm

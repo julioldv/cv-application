@@ -5,10 +5,10 @@ function CVPreview({
   onEditRequest,
 }) {
   return (
-    <section>
+    <section className="cv-preview">
       <h2>CV Preview</h2>
 
-      <article>
+      <article className="cv-document">
         <header>
           <h3>{generalInformation.fullName}</h3>
           <p>{generalInformation.email}</p>
@@ -35,7 +35,11 @@ function CVPreview({
         </section>
       </article>
 
-      <button type="button" onClick={onEditRequest}>
+      <button
+        type="button"
+        onClick={onEditRequest}
+        className="secondary-button"
+      >
         Edit
       </button>
     </section>

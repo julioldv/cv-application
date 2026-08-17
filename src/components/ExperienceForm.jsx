@@ -1,9 +1,9 @@
 function ExperienceForm({ experience, onExperienceChange }) {
   return (
-    <section>
+    <section className="form-section">
       <h2>Experience</h2>
 
-      <div>
+      <div className="form-field">
         <label htmlFor="company-name">Company name:</label>
         <input
           type="text"
@@ -14,7 +14,7 @@ function ExperienceForm({ experience, onExperienceChange }) {
         />
       </div>
 
-      <div>
+      <div className="form-field">
         <label htmlFor="position">Position:</label>
         <input
           type="text"
@@ -25,7 +25,7 @@ function ExperienceForm({ experience, onExperienceChange }) {
         />
       </div>
 
-      <div>
+      <div className="form-field">
         <label htmlFor="responsibilities">Main responsibilities:</label>
         <textarea
           id="responsibilities"
@@ -36,7 +36,7 @@ function ExperienceForm({ experience, onExperienceChange }) {
         ></textarea>
       </div>
 
-      <div>
+      <div className="form-field">
         <label htmlFor="experience-start-date">Start date:</label>
         <input
           type="date"
@@ -47,7 +47,7 @@ function ExperienceForm({ experience, onExperienceChange }) {
         />
       </div>
 
-      <div>
+      <div className="form-field">
         <label htmlFor="experience-end-date">End date:</label>
         <input
           type="date"

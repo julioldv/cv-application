@@ -1,9 +1,9 @@
 function GeneralInformationForm({ generalInformation, onInformationChange }) {
   return (
-    <section>
+    <section className="form-section">
       <h2>General Information</h2>
 
-      <div>
+      <div className="form-field">
         <label htmlFor="full-name">Name:</label>
         <input
           type="text"
@@ -14,7 +14,7 @@ function GeneralInformationForm({ generalInformation, onInformationChange }) {
         />
       </div>
 
-      <div>
+      <div className="form-field">
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -25,7 +25,7 @@ function GeneralInformationForm({ generalInformation, onInformationChange }) {
         />
       </div>
 
-      <div>
+      <div className="form-field">
         <label htmlFor="phone">Phone:</label>
         <input
           type="tel"

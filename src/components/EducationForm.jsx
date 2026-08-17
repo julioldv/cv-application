@@ -1,9 +1,9 @@
 function EducationForm({ education, onEducationChange }) {
   return (
-    <section>
+    <section className="form-section">
       <h2>Educational Information</h2>
 
-      <div>
+      <div className="form-field">
         <label htmlFor="school-name">School name:</label>
         <input
           type="text"
@@ -14,7 +14,7 @@ function EducationForm({ education, onEducationChange }) {
         />
       </div>
 
-      <div>
+      <div className="form-field">
         <label htmlFor="degree">Degree:</label>
         <input
           type="text"
@@ -25,7 +25,7 @@ function EducationForm({ education, onEducationChange }) {
         />
       </div>
 
-      <div>
+      <div className="form-field">
         <label htmlFor="education-start-date">Start date:</label>
         <input
           type="date"
@@ -36,7 +36,7 @@ function EducationForm({ education, onEducationChange }) {
         />
       </div>
 
-      <div>
+      <div className="form-field">
         <label htmlFor="education-end-date">End date:</label>
         <input
           type="date"

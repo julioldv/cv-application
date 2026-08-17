@@ -12,7 +12,7 @@ function CVForm({
   onFormSubmit,
 }) {
   return (
-    <form onSubmit={onFormSubmit}>
+    <form className="cv-form" onSubmit={onFormSubmit}>
       <GeneralInformationForm
         generalInformation={generalInformation}
         onInformationChange={onInformationChange}
@@ -25,7 +25,9 @@ function CVForm({
         experience={experience}
         onExperienceChange={onExperienceChange}
       />
-      <button type="submit">Submit</button>
+      <button type="submit" className="primary-button">
+        Submit
+      </button>
     </form>
   );
 }
